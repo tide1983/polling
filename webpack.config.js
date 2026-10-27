@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    clean: true, // Очищает папку dist перед каждой сборкой
+    clean: true,
+    publicPath: '/polling/', // <--- ДОБАВЛЕНА ЭТА СТРОКА
   },
   module: {
     rules: [
@@ -21,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource', // Обработка картинок
+        type: 'asset/resource',
       },
     ],
   },
@@ -33,6 +34,6 @@ module.exports = {
   devServer: {
     static: './dist',
     port: 3000,
-    open: true, // Автоматически открывает браузер
+    open: true,
   },
 };
