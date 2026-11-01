@@ -4,7 +4,7 @@ import { ajax } from 'rxjs/ajax';
 import { switchMap, map, catchError, filter } from 'rxjs/operators';
 
 // URL нашего локального сервера
-const SERVER_URL = 'http://localhost:3001/messages/unread';
+const SERVER_URL = 'https://polling-api-sepia.vercel.app/messages/unread';
 
 // Находим тело таблицы в DOM
 const tableBody = document.getElementById('messages-body');
